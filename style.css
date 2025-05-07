@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    background: #000000;
+    color: #fcfbfb;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #a5d6fa;
+    color: #0a0000;
+    font-size: larger;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+#mainheading {
+    color: #4c1111;
+    font-size: 80px;
+    font-family: fantasy;
+    font-weight: 100;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+nav a {
+    color: #630505;
+    margin: 10rem;
+    font-size: xx-large;
+    height: 50px;
+    width: 50px;
+    background-color: darksalmon;
+    border-width: 3mm;
+    border: 2px solid brown;
+    text-decoration: none;
+    font-weight: bolder;
+    border-radius: 15px;
+    padding: 10px 10px 10px 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.intro {
+    font-size: larger;
+    text-align: center;
+    color: #3b0a0a;
+    max-width: 800px;
+    margin: 1.5rem auto 2rem;
+    line-height: 1.6;
+    padding: 0 1rem;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    background: url('banner.jpeg') center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.banner h2 {
+    font-size: 2.5rem;
+}
+
+.banner p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Sections */
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.flip-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 4rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.flip-container {
+    perspective: 1000px;
+    width: 280px;
+    height: 360px;
+}
+
+.flip-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 5px solid #f98bc5;
+    border-radius: 15px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.flip-container:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.flip-card-front {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-front img {
+    width: 90px;
+    margin-bottom: 1rem;
+}
+
+.flip-card-front h3 {
+    color: #0073aa;
+    font-size: 1.2rem;
+}
+
+.flip-card-back {
+    background-color: #f0faff;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-back h3 {
+    color: #004a7c;
+    margin-bottom: 0.5rem;
+}
+
+.flip-card-back p {
+    color: #444;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+.flip-card-back a {
+    padding: 0.5rem 1rem;
+    background-color: #0073aa;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.flip-card-back a:hover {
+    background-color: #005f8a;
+}
+
+.faq {
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 1rem;
+    background-color: darksalmon;
+    border-width: 3mm;
+    border: 2px solid brown;
+    text-decoration: none;
+    font-weight: bolder;
+    border-radius: 15px;
+    padding: 10px 10px 10px 10px
+}
+
+.faq h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #f5f5f6;
+}
+
+details {
+    background: #f4f9ff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+summary {
+    font-weight: bold;
+    color: #333;
+}
+
+details p {
+    margin-top: 0.5rem;
+    color: #555;
+}
+
+h2 {
+    text-align: center;
+    font-size: xxx-large;
+    margin-bottom: 1.5rem;
+    color: #fdfdfd;
+}
+
+/* Appliance Cards */
+.appliances {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.appliance {
+    background-color: #040000;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.appliance:hover {
+    transform: scale(1.05);
+}
+
+.appliance img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.appliance h3 {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.appliance p {
+    margin: 0.8rem 0 1rem;
+    font-size: 1rem;
+    color: #f9f7f7;
+}
+
+.appliance button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.appliance button:hover {
+    background-color: #0056b3;
+}
+
+.appliance:hover {
+    transform: translateY(-5px);
+}
+
+.appliance img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.appliance button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #00416a;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.appliance button:hover {
+    background: #003052;
+}
+
+/* Forms */
+form {
+    background: #a9cbec;
+    color: #000;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #0d0000;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #00416a;
+    color: #0c0000;
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #003052;
+}
+
+/* Footer */
+footer {
+    background-color: #002a44;
+    color: rgb(21, 0, 0);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+}
